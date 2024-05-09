@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseProject.Models
 {
-
+ 
     public class GameLibrary<Game> : List<Game>
     {
 

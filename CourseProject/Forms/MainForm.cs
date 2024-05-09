@@ -40,7 +40,7 @@ namespace CourseProject.Forms
         List<Game> SearchedGames = new List<Game>();
 
 
-    public MainForm()
+        public MainForm()
         {
             InitializeComponent();
         }

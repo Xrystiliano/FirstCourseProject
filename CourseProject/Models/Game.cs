@@ -36,7 +36,7 @@ namespace CourseProject.Models
             Console.WriteLine($"Name: {Name}\nStudio: {StudioName}\nYear: {YearRelease}\nScore: {Score}/10\nStorage: {Storage}\nPassed: {Passed}\nDescribtion:{Description}\n");
         }
 
-        
+
         /// Властивість жанрів???
     }
 }
