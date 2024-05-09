@@ -1,0 +1,17 @@
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.Forms.MainForm.resources
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.csproj.GenerateResource.cache
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.AssemblyInfoInputs.cache
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.AssemblyInfo.cs
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.csproj.CoreCompileInputs.cache
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\bin\Debug\net8.0-windows\CourseProject.exe
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\bin\Debug\net8.0-windows\CourseProject.deps.json
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\bin\Debug\net8.0-windows\CourseProject.runtimeconfig.json
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\bin\Debug\net8.0-windows\CourseProject.dll
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\bin\Debug\net8.0-windows\CourseProject.pdb
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.dll
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\refint\CourseProject.dll
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.pdb
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.genruntimeconfig.cache
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\ref\CourseProject.dll
+C:\Users\Egor\Desktop\Курсовой проект\Code\CourseProject\CourseProject\obj\Debug\net8.0-windows\CourseProject.sourcelink.json
