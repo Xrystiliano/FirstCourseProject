@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Egor\\Desktop\\Курсовой проект\\Code\\CourseProject\\CourseProject\\CourseProject.csproj",
+      "projectUniqueName": "C:\\Users\\Egor\\Desktop\\Курсовой проект\\CourseProject\\CourseProject\\CourseProject.csproj",
       "projectName": "CourseProject",
-      "projectPath": "C:\\Users\\Egor\\Desktop\\Курсовой проект\\Code\\CourseProject\\CourseProject\\CourseProject.csproj",
+      "projectPath": "C:\\Users\\Egor\\Desktop\\Курсовой проект\\CourseProject\\CourseProject\\CourseProject.csproj",
       "packagesPath": "C:\\Users\\Egor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Egor\\Desktop\\Курсовой проект\\Code\\CourseProject\\CourseProject\\obj\\",
+      "outputPath": "C:\\Users\\Egor\\Desktop\\Курсовой проект\\CourseProject\\CourseProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

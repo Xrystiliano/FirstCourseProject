@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CourseProject.Models
 {
-    internal class Game
+    public class Game
     {
         public Game(string name, string studioName, string description, int yearRelease, float score, float storage, bool passed)
         {
-            Name = name;
+            name = Name;
             StudioName = studioName;
             Description = description;
             YearRelease = yearRelease;
@@ -31,9 +31,12 @@ namespace CourseProject.Models
 
         public bool Passed { get; set; }
 
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Name: {Name}\nStudio: {StudioName}\nYear: {YearRelease}\nScore: {Score}/10\nStorage: {Storage}\nPassed: {Passed}\nDescribtion:{Description}\n");
+        }
 
-
-
+        
         /// Властивість жанрів???
     }
 }
