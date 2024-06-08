@@ -28,33 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Label ScoreLabel;
             Label PassedLabel;
+            Label GenresLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
-            newToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator = new ToolStripSeparator();
             saveToolStripMenuItem = new ToolStripMenuItem();
-            saveAsToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
-            printToolStripMenuItem = new ToolStripMenuItem();
-            printPreviewToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
-            undoToolStripMenuItem = new ToolStripMenuItem();
-            redoToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
-            cutToolStripMenuItem = new ToolStripMenuItem();
-            copyToolStripMenuItem = new ToolStripMenuItem();
-            pasteToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator4 = new ToolStripSeparator();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            toolsToolStripMenuItem = new ToolStripMenuItem();
-            customizeToolStripMenuItem = new ToolStripMenuItem();
-            optionsToolStripMenuItem = new ToolStripMenuItem();
+            this.показатиВсеToolStripMenuItem = new ToolStripMenuItem();
+            this.видалитиВсеToolStripMenuItem = new ToolStripMenuItem();
+            AddToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             contentsToolStripMenuItem = new ToolStripMenuItem();
             indexToolStripMenuItem = new ToolStripMenuItem();
@@ -62,32 +54,38 @@
             toolStripSeparator5 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             SearchContainer = new Panel();
+            GenresInput = new TextBox();
+            SearchButton = new Button();
             PassedRadioPanel = new Panel();
             PassedYes = new RadioButton();
             PassedNo = new RadioButton();
             ScoreRadioPanel = new Panel();
-            BiggerScore = new RadioButton();
-            LessScore = new RadioButton();
+            ScoreGreater = new RadioButton();
+            ScoreLess = new RadioButton();
             StorageRadioPanel = new Panel();
-            LessStorage = new RadioButton();
-            BiggerStorage = new RadioButton();
+            StorageLess = new RadioButton();
+            StorageGreater = new RadioButton();
             ScoreInput = new TextBox();
             StorageInput = new TextBox();
             StorageLabel = new Label();
-            YaerReleaseInput = new TextBox();
+            YearReleaseInput = new TextBox();
             YearReleaseLabel = new Label();
             StudioNameInput = new TextBox();
             StudioLabel = new Label();
             NameInput = new TextBox();
             NameLabel = new Label();
-            SearchButton = new Button();
+            AddButton = new Button();
+            resultList = new ListBox();
+            gameBindingSource = new BindingSource(components);
             ScoreLabel = new Label();
             PassedLabel = new Label();
+            GenresLabel = new Label();
             menuStrip1.SuspendLayout();
             SearchContainer.SuspendLayout();
             PassedRadioPanel.SuspendLayout();
             ScoreRadioPanel.SuspendLayout();
             StorageRadioPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gameBindingSource).BeginInit();
             SuspendLayout();
             // 
             // ScoreLabel
@@ -99,43 +97,43 @@
             ScoreLabel.Size = new Size(86, 26);
             ScoreLabel.TabIndex = 8;
             ScoreLabel.Text = "Оцінка:";
-            ScoreLabel.Click += ScoreLabel_Click;
             // 
             // PassedLabel
             // 
             PassedLabel.AutoSize = true;
             PassedLabel.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            PassedLabel.Location = new Point(61, 255);
+            PassedLabel.Location = new Point(58, 292);
             PassedLabel.Name = "PassedLabel";
             PassedLabel.Size = new Size(110, 26);
             PassedLabel.TabIndex = 14;
             PassedLabel.Text = "Пройшли:";
             // 
+            // GenresLabel
+            // 
+            GenresLabel.AutoSize = true;
+            GenresLabel.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            GenresLabel.Location = new Point(84, 252);
+            GenresLabel.Name = "GenresLabel";
+            GenresLabel.Size = new Size(84, 26);
+            GenresLabel.TabIndex = 22;
+            GenresLabel.Text = "Жанри:";
+            // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1372, 28);
+            menuStrip1.Size = new Size(1333, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, toolStripSeparator, saveToolStripMenuItem, saveAsToolStripMenuItem, toolStripSeparator1, printToolStripMenuItem, printPreviewToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem, toolStripSeparator, saveToolStripMenuItem, toolStripSeparator1, toolStripSeparator2, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(46, 24);
             fileToolStripMenuItem.Text = "&File";
-            // 
-            // newToolStripMenuItem
-            // 
-            newToolStripMenuItem.Image = (Image)resources.GetObject("newToolStripMenuItem.Image");
-            newToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
-            newToolStripMenuItem.Size = new Size(181, 26);
-            newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
             // 
@@ -143,13 +141,14 @@
             openToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             openToolStripMenuItem.Name = "openToolStripMenuItem";
             openToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
-            openToolStripMenuItem.Size = new Size(181, 26);
-            openToolStripMenuItem.Text = "&Open";
+            openToolStripMenuItem.Size = new Size(235, 26);
+            openToolStripMenuItem.Text = "Завантажити";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(178, 6);
+            toolStripSeparator.Size = new Size(232, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -157,131 +156,64 @@
             saveToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             saveToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
-            saveToolStripMenuItem.Size = new Size(181, 26);
-            saveToolStripMenuItem.Text = "&Save";
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(181, 26);
-            saveAsToolStripMenuItem.Text = "Save &As";
+            saveToolStripMenuItem.Size = new Size(235, 26);
+            saveToolStripMenuItem.Text = "Зберегти";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(178, 6);
-            // 
-            // printToolStripMenuItem
-            // 
-            printToolStripMenuItem.Image = (Image)resources.GetObject("printToolStripMenuItem.Image");
-            printToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            printToolStripMenuItem.Name = "printToolStripMenuItem";
-            printToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.P;
-            printToolStripMenuItem.Size = new Size(181, 26);
-            printToolStripMenuItem.Text = "&Print";
-            // 
-            // printPreviewToolStripMenuItem
-            // 
-            printPreviewToolStripMenuItem.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem.Image");
-            printPreviewToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            printPreviewToolStripMenuItem.Size = new Size(181, 26);
-            printPreviewToolStripMenuItem.Text = "Print Pre&view";
+            toolStripSeparator1.Size = new Size(232, 6);
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(178, 6);
+            toolStripSeparator2.Size = new Size(232, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(181, 26);
+            exitToolStripMenuItem.Size = new Size(235, 26);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
-            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { undoToolStripMenuItem, redoToolStripMenuItem, toolStripSeparator3, cutToolStripMenuItem, copyToolStripMenuItem, pasteToolStripMenuItem, toolStripSeparator4, selectAllToolStripMenuItem });
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator3, toolStripSeparator4, this.показатиВсеToolStripMenuItem, this.видалитиВсеToolStripMenuItem, AddToolStripMenuItem });
             editToolStripMenuItem.Name = "editToolStripMenuItem";
             editToolStripMenuItem.Size = new Size(49, 24);
             editToolStripMenuItem.Text = "&Edit";
             // 
-            // undoToolStripMenuItem
-            // 
-            undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            undoToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Z;
-            undoToolStripMenuItem.Size = new Size(179, 26);
-            undoToolStripMenuItem.Text = "&Undo";
-            // 
-            // redoToolStripMenuItem
-            // 
-            redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            redoToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Y;
-            redoToolStripMenuItem.Size = new Size(179, 26);
-            redoToolStripMenuItem.Text = "&Redo";
-            // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(176, 6);
-            // 
-            // cutToolStripMenuItem
-            // 
-            cutToolStripMenuItem.Image = (Image)resources.GetObject("cutToolStripMenuItem.Image");
-            cutToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            cutToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.X;
-            cutToolStripMenuItem.Size = new Size(179, 26);
-            cutToolStripMenuItem.Text = "Cu&t";
-            // 
-            // copyToolStripMenuItem
-            // 
-            copyToolStripMenuItem.Image = (Image)resources.GetObject("copyToolStripMenuItem.Image");
-            copyToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            copyToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.C;
-            copyToolStripMenuItem.Size = new Size(179, 26);
-            copyToolStripMenuItem.Text = "&Copy";
-            // 
-            // pasteToolStripMenuItem
-            // 
-            pasteToolStripMenuItem.Image = (Image)resources.GetObject("pasteToolStripMenuItem.Image");
-            pasteToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            pasteToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.V;
-            pasteToolStripMenuItem.Size = new Size(179, 26);
-            pasteToolStripMenuItem.Text = "&Paste";
+            toolStripSeparator3.Size = new Size(221, 6);
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(176, 6);
+            toolStripSeparator4.Size = new Size(221, 6);
             // 
-            // selectAllToolStripMenuItem
+            // ShowAllToolStripMenuItem
             // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(179, 26);
-            selectAllToolStripMenuItem.Text = "Select &All";
+            this.показатиВсеToolStripMenuItem.Name = "ShowAllToolStripMenuItem";
+            this.показатиВсеToolStripMenuItem.Size = new Size(224, 26);
+            this.показатиВсеToolStripMenuItem.Text = "Показати все";
+            this.показатиВсеToolStripMenuItem.Click += this.ShowAllToolStripMenuItem_Click;
             // 
-            // toolsToolStripMenuItem
+            // DeleteAllToolStripMenuItem
             // 
-            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { customizeToolStripMenuItem, optionsToolStripMenuItem });
-            toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            toolsToolStripMenuItem.Size = new Size(58, 24);
-            toolsToolStripMenuItem.Text = "&Tools";
+            this.видалитиВсеToolStripMenuItem.Name = "DeleteAllToolStripMenuItem";
+            this.видалитиВсеToolStripMenuItem.Size = new Size(224, 26);
+            this.видалитиВсеToolStripMenuItem.Text = "Видалити Все";
+            this.видалитиВсеToolStripMenuItem.Click += this.DeleteAllToolStripMenuItem_Click;
             // 
-            // customizeToolStripMenuItem
+            // AddToolStripMenuItem
             // 
-            customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
-            customizeToolStripMenuItem.Size = new Size(161, 26);
-            customizeToolStripMenuItem.Text = "&Customize";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(161, 26);
-            optionsToolStripMenuItem.Text = "&Options";
+            AddToolStripMenuItem.Name = "AddToolStripMenuItem";
+            AddToolStripMenuItem.Size = new Size(224, 26);
+            AddToolStripMenuItem.Text = "Додати";
+            AddToolStripMenuItem.Click += AddGameToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -323,6 +255,8 @@
             // 
             SearchContainer.Anchor = AnchorStyles.Top;
             SearchContainer.BorderStyle = BorderStyle.FixedSingle;
+            SearchContainer.Controls.Add(GenresInput);
+            SearchContainer.Controls.Add(GenresLabel);
             SearchContainer.Controls.Add(SearchButton);
             SearchContainer.Controls.Add(PassedRadioPanel);
             SearchContainer.Controls.Add(ScoreRadioPanel);
@@ -332,22 +266,41 @@
             SearchContainer.Controls.Add(ScoreLabel);
             SearchContainer.Controls.Add(StorageInput);
             SearchContainer.Controls.Add(StorageLabel);
-            SearchContainer.Controls.Add(YaerReleaseInput);
+            SearchContainer.Controls.Add(YearReleaseInput);
             SearchContainer.Controls.Add(YearReleaseLabel);
             SearchContainer.Controls.Add(StudioNameInput);
             SearchContainer.Controls.Add(StudioLabel);
             SearchContainer.Controls.Add(NameInput);
             SearchContainer.Controls.Add(NameLabel);
-            SearchContainer.Location = new Point(129, 46);
+            SearchContainer.Location = new Point(12, 31);
             SearchContainer.Name = "SearchContainer";
-            SearchContainer.Size = new Size(700, 366);
+            SearchContainer.Size = new Size(700, 396);
             SearchContainer.TabIndex = 1;
+            // 
+            // GenresInput
+            // 
+            GenresInput.Location = new Point(174, 253);
+            GenresInput.MaxLength = 50;
+            GenresInput.Name = "GenresInput";
+            GenresInput.Size = new Size(280, 27);
+            GenresInput.TabIndex = 23;
+            // 
+            // SearchButton
+            // 
+            SearchButton.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            SearchButton.Location = new Point(261, 355);
+            SearchButton.Name = "SearchButton";
+            SearchButton.Size = new Size(141, 36);
+            SearchButton.TabIndex = 15;
+            SearchButton.Text = "Пошук";
+            SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.Click += SearchButton_Click;
             // 
             // PassedRadioPanel
             // 
             PassedRadioPanel.Controls.Add(PassedYes);
             PassedRadioPanel.Controls.Add(PassedNo);
-            PassedRadioPanel.Location = new Point(174, 255);
+            PassedRadioPanel.Location = new Point(171, 292);
             PassedRadioPanel.Name = "PassedRadioPanel";
             PassedRadioPanel.Size = new Size(106, 27);
             PassedRadioPanel.TabIndex = 3;
@@ -378,75 +331,74 @@
             // 
             // ScoreRadioPanel
             // 
-            ScoreRadioPanel.Controls.Add(BiggerScore);
-            ScoreRadioPanel.Controls.Add(LessScore);
+            ScoreRadioPanel.Controls.Add(ScoreGreater);
+            ScoreRadioPanel.Controls.Add(ScoreLess);
             ScoreRadioPanel.Location = new Point(460, 212);
             ScoreRadioPanel.Name = "ScoreRadioPanel";
             ScoreRadioPanel.Size = new Size(223, 27);
             ScoreRadioPanel.TabIndex = 3;
             // 
-            // BiggerScore
+            // ScoreGreater
             // 
-            BiggerScore.AutoSize = true;
-            BiggerScore.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            BiggerScore.Location = new Point(0, 3);
-            BiggerScore.Name = "BiggerScore";
-            BiggerScore.Size = new Size(114, 24);
-            BiggerScore.TabIndex = 10;
-            BiggerScore.TabStop = true;
-            BiggerScore.Text = "Більше ніж";
-            BiggerScore.UseVisualStyleBackColor = true;
-            BiggerScore.CheckedChanged += BiggerScore_CheckedChanged;
+            ScoreGreater.AutoSize = true;
+            ScoreGreater.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ScoreGreater.Location = new Point(0, 3);
+            ScoreGreater.Name = "ScoreGreater";
+            ScoreGreater.Size = new Size(114, 24);
+            ScoreGreater.TabIndex = 10;
+            ScoreGreater.TabStop = true;
+            ScoreGreater.Text = "Більше ніж";
+            ScoreGreater.UseVisualStyleBackColor = true;
             // 
-            // LessScore
+            // ScoreLess
             // 
-            LessScore.AutoSize = true;
-            LessScore.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            LessScore.Location = new Point(120, 3);
-            LessScore.Name = "LessScore";
-            LessScore.Size = new Size(109, 24);
-            LessScore.TabIndex = 11;
-            LessScore.TabStop = true;
-            LessScore.Text = "Менш ніж";
-            LessScore.UseVisualStyleBackColor = true;
+            ScoreLess.AutoSize = true;
+            ScoreLess.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ScoreLess.Location = new Point(120, 3);
+            ScoreLess.Name = "ScoreLess";
+            ScoreLess.Size = new Size(109, 24);
+            ScoreLess.TabIndex = 11;
+            ScoreLess.TabStop = true;
+            ScoreLess.Text = "Менш ніж";
+            ScoreLess.UseVisualStyleBackColor = true;
             // 
             // StorageRadioPanel
             // 
-            StorageRadioPanel.Controls.Add(LessStorage);
-            StorageRadioPanel.Controls.Add(BiggerStorage);
+            StorageRadioPanel.Controls.Add(StorageLess);
+            StorageRadioPanel.Controls.Add(StorageGreater);
             StorageRadioPanel.Location = new Point(460, 169);
             StorageRadioPanel.Name = "StorageRadioPanel";
             StorageRadioPanel.Size = new Size(223, 27);
             StorageRadioPanel.TabIndex = 2;
             // 
-            // LessStorage
+            // StorageLess
             // 
-            LessStorage.AutoSize = true;
-            LessStorage.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            LessStorage.Location = new Point(120, 3);
-            LessStorage.Name = "LessStorage";
-            LessStorage.Size = new Size(109, 24);
-            LessStorage.TabIndex = 16;
-            LessStorage.TabStop = true;
-            LessStorage.Text = "Менш ніж";
-            LessStorage.UseVisualStyleBackColor = true;
-            LessStorage.CheckedChanged += LessStorage_CheckedChanged;
+            StorageLess.AutoSize = true;
+            StorageLess.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            StorageLess.Location = new Point(120, 3);
+            StorageLess.Name = "StorageLess";
+            StorageLess.Size = new Size(109, 24);
+            StorageLess.TabIndex = 16;
+            StorageLess.TabStop = true;
+            StorageLess.Text = "Менш ніж";
+            StorageLess.UseVisualStyleBackColor = true;
             // 
-            // BiggerStorage
+            // StorageGreater
             // 
-            BiggerStorage.AutoSize = true;
-            BiggerStorage.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            BiggerStorage.Location = new Point(3, 3);
-            BiggerStorage.Name = "BiggerStorage";
-            BiggerStorage.Size = new Size(114, 24);
-            BiggerStorage.TabIndex = 15;
-            BiggerStorage.TabStop = true;
-            BiggerStorage.Text = "Більше ніж";
-            BiggerStorage.UseVisualStyleBackColor = false;
+            StorageGreater.AutoSize = true;
+            StorageGreater.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            StorageGreater.Location = new Point(3, 3);
+            StorageGreater.Name = "StorageGreater";
+            StorageGreater.Size = new Size(114, 24);
+            StorageGreater.TabIndex = 15;
+            StorageGreater.TabStop = true;
+            StorageGreater.Text = "Більше ніж";
+            StorageGreater.UseVisualStyleBackColor = false;
             // 
             // ScoreInput
             // 
             ScoreInput.Location = new Point(174, 212);
+            ScoreInput.MaxLength = 2;
             ScoreInput.Name = "ScoreInput";
             ScoreInput.Size = new Size(280, 27);
             ScoreInput.TabIndex = 9;
@@ -467,15 +419,13 @@
             StorageLabel.Size = new Size(165, 26);
             StorageLabel.TabIndex = 6;
             StorageLabel.Text = "Місце на диску:";
-            StorageLabel.Click += StorageInput_Click;
             // 
-            // YaerReleaseInput
+            // YearReleaseInput
             // 
-            YaerReleaseInput.Location = new Point(174, 116);
-            YaerReleaseInput.Name = "YaerReleaseInput";
-            YaerReleaseInput.Size = new Size(280, 27);
-            YaerReleaseInput.TabIndex = 5;
-            YaerReleaseInput.TextChanged += textBox2_TextChanged;
+            YearReleaseInput.Location = new Point(174, 116);
+            YearReleaseInput.Name = "YearReleaseInput";
+            YearReleaseInput.Size = new Size(280, 27);
+            YearReleaseInput.TabIndex = 5;
             // 
             // YearReleaseLabel
             // 
@@ -493,7 +443,6 @@
             StudioNameInput.Name = "StudioNameInput";
             StudioNameInput.Size = new Size(280, 27);
             StudioNameInput.TabIndex = 3;
-            StudioNameInput.TextChanged += textBox1_TextChanged;
             // 
             // StudioLabel
             // 
@@ -511,7 +460,6 @@
             NameInput.Name = "NameInput";
             NameInput.Size = new Size(280, 27);
             NameInput.TabIndex = 1;
-            NameInput.TextChanged += NameInput_TextChanged;
             // 
             // NameLabel
             // 
@@ -523,28 +471,46 @@
             NameLabel.TabIndex = 0;
             NameLabel.Text = "Назва:";
             // 
-            // SearchButton
+            // AddButton
             // 
-            SearchButton.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            SearchButton.Location = new Point(554, 325);
-            SearchButton.Name = "SearchButton";
-            SearchButton.Size = new Size(141, 36);
-            SearchButton.TabIndex = 15;
-            SearchButton.Text = "Пошук";
-            SearchButton.UseVisualStyleBackColor = true;
-            SearchButton.Click += SearchButton_Click;
+            AddButton.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            AddButton.Location = new Point(277, 433);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(138, 43);
+            AddButton.TabIndex = 2;
+            AddButton.Text = "Додати";
+            AddButton.UseVisualStyleBackColor = true;
+            AddButton.Click += AddButton_Click;
+            // 
+            // resultList
+            // 
+            resultList.DataSource = gameBindingSource;
+            resultList.DisplayMember = "Name";
+            resultList.FormattingEnabled = true;
+            resultList.Location = new Point(708, 31);
+            resultList.Name = "resultList";
+            resultList.Size = new Size(625, 624);
+            resultList.TabIndex = 3;
+            resultList.MouseDoubleClick += resultList_MouseDoubleClick;
+            // 
+            // gameBindingSource
+            // 
+            gameBindingSource.DataSource = typeof(Models.Game);
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1372, 572);
+            ClientSize = new Size(1333, 647);
+            Controls.Add(resultList);
+            Controls.Add(AddButton);
             Controls.Add(SearchContainer);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             MinimumSize = new Size(810, 523);
             Name = "MainForm";
             Text = "MainForm";
+            FormClosing += MainForm_FormClosing;
             Load += MainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -556,6 +522,7 @@
             ScoreRadioPanel.PerformLayout();
             StorageRadioPanel.ResumeLayout(false);
             StorageRadioPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gameBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -564,28 +531,16 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripMenuItem saveToolStripMenuItem;
-        private ToolStripMenuItem saveAsToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem printToolStripMenuItem;
-        private ToolStripMenuItem printPreviewToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
-        private ToolStripMenuItem undoToolStripMenuItem;
-        private ToolStripMenuItem redoToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator3;
-        private ToolStripMenuItem cutToolStripMenuItem;
-        private ToolStripMenuItem copyToolStripMenuItem;
-        private ToolStripMenuItem pasteToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator4;
-        private ToolStripMenuItem selectAllToolStripMenuItem;
-        private ToolStripMenuItem toolsToolStripMenuItem;
-        private ToolStripMenuItem customizeToolStripMenuItem;
-        private ToolStripMenuItem optionsToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem contentsToolStripMenuItem;
         private ToolStripMenuItem indexToolStripMenuItem;
@@ -597,21 +552,28 @@
         private TextBox StudioNameInput;
         private Label StudioLabel;
         private TextBox NameInput;
-        private TextBox YaerReleaseInput;
+        private TextBox YearReleaseInput;
         private Label YearReleaseLabel;
         private TextBox StorageInput;
         private Label StorageLabel;
         private TextBox ScoreInput;
         private Label ScoreLabel;
-        private RadioButton LessScore;
-        private RadioButton BiggerScore;
+        private RadioButton ScoreLess;
+        private RadioButton ScoreGreater;
         private RadioButton PassedNo;
         private RadioButton PassedYes;
-        private RadioButton LessStorage;
-        private RadioButton BiggerStorage;
+        private RadioButton StorageLess;
+        private RadioButton StorageGreater;
         private Panel StorageRadioPanel;
         private Panel ScoreRadioPanel;
         private Panel PassedRadioPanel;
         private Button SearchButton;
+        private Button AddButton;
+        private ListBox resultList;
+        private BindingSource gameBindingSource;
+        private ToolStripMenuItem показатиВсеToolStripMenuItem;
+        private ToolStripMenuItem видалитиВсеToolStripMenuItem;
+        private ToolStripMenuItem AddToolStripMenuItem;
+        private TextBox GenresInput;
     }
 }

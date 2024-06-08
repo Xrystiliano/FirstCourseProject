@@ -8,16 +8,20 @@ namespace CourseProject.Models
 {
     public class Game
     {
-        public Game(string name, string studioName, string description, int yearRelease, float score, float storage, bool passed)
+        public Game(string name, string studioName, int yearRelease, float score, float storage, bool passed, string description, string[] genres)
         {
-            name = Name;
+            Name = name;
             StudioName = studioName;
             Description = description;
             YearRelease = yearRelease;
             Score = score;
             Storage = storage;
             Passed = passed;
+            Genres = genres;
         }
+
+        public Game() { }
+
 
         public string Name { get; set; }
         public string StudioName { get; set; }
@@ -31,9 +35,11 @@ namespace CourseProject.Models
 
         public bool Passed { get; set; }
 
-        public void PrintInfo()
+        public string[] Genres { get; set; }
+
+        public string GetInfo()
         {
-            Console.WriteLine($"Name: {Name}\nStudio: {StudioName}\nYear: {YearRelease}\nScore: {Score}/10\nStorage: {Storage}\nPassed: {Passed}\nDescribtion:{Description}\n");
+            return $"Name: {Name}\nStudio: {StudioName}\nYear: {YearRelease}\nScore: {Score}/10\nStorage: {Storage}\nPassed: {Passed}\nDescribtion:{Description}\n------------\n";
         }
 
 
